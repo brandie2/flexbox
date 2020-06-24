@@ -72,7 +72,9 @@ header nav ul li {
 	font-weight: 700;
 	font-size: 16px;
 	padding: 0 10px;
-	display: inline;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -121,7 +123,6 @@ header nav ul li a{
 .section-three {
 	width: 33%;
 	height: auto;
-	
 	border-top: 1px solid #eee;
 }
 
@@ -175,4 +176,50 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 16px;
+}
+
+/* Media Queries */
+
+@media all and (min-width:768px) {
+	.bottom-section {
+		margin: 0 auto;
+		clear: both;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+		border-top: 1px solid #eee;
+	}
+}
+
+@media all and (min-width:1200px) {
+	header nav ul{
+		display:flex;
+		justify-content: space-between;
+	}
+	.bottom-section {
+		margin: 0 auto;
+		clear: both;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+		border-top: 1px solid #eee;
+}
 }
